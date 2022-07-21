@@ -7,14 +7,18 @@
     <h1 id='tanaka'>JavaScript test</h1>
     
 
-    <button onclick="aloha()">CLICK ME!</button>
-
-    <img id="LUFFY" src="luffy.jpg">
+    <img id="LUFFY" src="luffy.jpg" onclick="aloha()">
 
     <script>
+      let num = 0
       function aloha() {
+        const files = ['lyffy.jpg', 'ace.jpg', 'sabo.jpg']
+        num++
+        if( num >= files.length ) {
+          num = 0
+        }
         let LUFFY = document.getElementById('LUFFY')
-        LUFFY.src = 'luffy1.jpg'
+        LUFFY.src = files[num]
       }
     </script>
   </body>
